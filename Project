@@ -1,0 +1,34 @@
+public class NomClasse //extends {
+    
+    public int expandedSize(int[][] compressed) { //Sense grau com a constant
+        return compressed[compressed.length - 1][0];
+    }
+    
+    public int expandedSize(int[][] compressed) { //Amb grau com a constant
+        return DEGREE;
+    }
+    
+    public int compressedSize(int[] expanded) {
+        int count;
+        for(int i = 0; i < expanded.length; i++) {
+            if(expanded[i] != 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public int[] createExpanded(int expandedSize) {
+        int[] expanded = new int[expandedSize];
+        return expanded;
+    }
+    
+    public int[][] createCompressed(int compressedSize) {
+        int[][] compressed = new int[compressedSize][2];
+        return compressedSize;
+    }
+    
+    public void copyTo(int[] fromExpanded, int[][] toCompressed) {
+        
+    }
+}
