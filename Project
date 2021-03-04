@@ -29,6 +29,27 @@ public class NomClasse //extends {
     }
     
     public void copyTo(int[] fromExpanded, int[][] toCompressed) {
-        
+        int j = 0;
+        for(int i = 0; i < fromExpanded.length; i++) {
+            if(fromExpanded[i] != 0) {
+                toCompressed[j][0] = i;
+                toCompressed[j][1] = fromExpanded[i];
+                j++;
+            }
+        }
     }
+    
+    public void copyTo(int[][] fromCompressed, int[] toExpanded) {
+        for(int i = 0; i < fromCompressed.length; i++) {
+            toExpanded[fromCompressed[0][i]] = fromCopressed[1][i];
+        }
+    }
+    
+    public int[][] compress(int[] expanded) {
+        int[][] compressed = createCompressed(compressedSize(expanded));
+        for(int i = 0; i < expanded; i++) {
+            //ACABAR
+        }
+    }
+    
 }
